@@ -1,0 +1,87 @@
+<!-- <div class="container-fluid padding">
+    <div class="row team text-center">
+        <div class="col-12">
+            <h1 class="display-4">Our Team</h1>
+            <hr class="light">
+        </div>
+        <hr>
+    </div>
+</div>
+
+
+<div class="container-fluid padding">
+    <div class="row padding">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="../assets/team2.png" alt="" class="card-img-top"> 
+                <div class="card-body">
+                    <h4 class="card-title">Susan MacRae</h4>
+                    <p class="card-text">Susan is an Web Developer with 10 years of Experience</p>
+                    <a href="" class="btn btn-outline-dark">View Profile</a>
+                </div>   
+            </div> 
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="../assets/team3.png" alt="" class="card-img-top"> 
+                <div class="card-body">
+                    <h4 class="card-title">Nikolay Nikolov</h4>
+                    <p class="card-text">Nikolay is a Data Analyst with over 15 years of Experience</p>
+                    <a href="" class="btn btn-outline-dark">View Profile</a>
+                </div>   
+            </div> 
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="../assets/team1.png" alt="" class="card-img-top"> 
+                <div class="card-body">
+                    <h4 class="card-title">Radek Raul</h4>
+                    <p class="card-text">Radek is a Devops Engineer with 5 years of Experience</p>
+                    <a href="" class="btn btn-outline-dark">View Profile</a>
+                </div>   
+            </div> 
+        </div>
+        
+    </div>
+</div>
+<br>
+<br>
+<hr class="light">
+<br>
+<br> -->
+
+<div class="row team text-center">
+    <div class="col-12">
+        <h1 class="display-4">Our Team</h1>
+        <hr class="light">
+    </div>
+    <hr>
+</div>
+
+
+<div class="container">
+    <table class="table table-bordered table-hover table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Interested in</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users" (click)="updateUser(user.id)">
+                <th>{{user.name}}</th>
+                <th>{{user.email}}</th>
+                <th>{{user.phone}}</th>
+                <th>{{user.topic}}</th>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <ul *ngFor="let user of users">
+        <li (click)="delete(user.id)" >{{ user.id }}{{user.name}} {{user.email}} {{user.phone}} {{user.topic}}</li>
+        <a routerLink="/update/{{ user.id }}">update</a>
+    </ul> -->
+
+
+</div>
